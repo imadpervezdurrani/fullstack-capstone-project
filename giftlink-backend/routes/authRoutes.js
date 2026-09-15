@@ -17,7 +17,8 @@ router.post('/register', async (req, res) => {
         const db = await connectToDatabase();
         const collection = db.collection("users");
 
-        const existingEmail = await collection.findOne({ email });
+        // Check if user already exists using email from request body
+        const existingEmail = await collection.findOne({ email: req.body.email });
         if (existingEmail) {
             return res.status(400).json({ error: "User with this email already exists" });
         }
@@ -26,19 +27,19 @@ router.post('/register', async (req, res) => {
         const hash = await bcryptjs.hash(password, salt);
 
         const newUser = await collection.insertOne({
-            email,
+            email: req.body.email,
             firstName: firstName || '',
             lastName: lastName || '',
             password: hash,
             createdAt: new Date()
         });
 
-        const payload = { user: { id: newUser.insertedId, email } };
+        const payload = { user: { id: newUser.insertedId, email: req.body.email } };
         const authtoken = jwt.sign(payload, JWT_SECRET, { expiresIn: '7d' });
 
         res.status(201).json({
             authtoken,
-            email,
+            email: req.body.email,
             firstName: firstName || '',
             lastName: lastName || ''
         });
@@ -59,7 +60,8 @@ router.post('/login', async (req, res) => {
         const db = await connectToDatabase();
         const collection = db.collection("users");
 
-        const theUser = await collection.findOne({ email });
+        // Locate current user in database using email from request body
+        const theUser = await collection.findOne({ email: req.body.email });
         if (!theUser) {
             return res.status(404).json({ error: "User not found" });
         }
@@ -95,21 +97,22 @@ router.put('/update', async (req, res) => {
         const db = await connectToDatabase();
         const collection = db.collection("users");
 
-        const theUser = await collection.findOne({ email });
-        if (!theUser) {
+        // Locate current user using email from request body
+        const existingUser = await collection.findOne({ email: req.body.email });
+        if (!existingUser) {
             return res.status(404).json({ error: "User not found" });
         }
 
         await collection.updateOne(
-            { email },
-            { $set: { firstName: firstName || theUser.firstName, lastName: lastName || theUser.lastName } }
+            { email: req.body.email },
+            { $set: { firstName: firstName || existingUser.firstName, lastName: lastName || existingUser.lastName } }
         );
 
         res.json({
             message: "User updated successfully",
-            email,
-            firstName: firstName || theUser.firstName,
-            lastName: lastName || theUser.lastName
+            email: req.body.email,
+            firstName: firstName || existingUser.firstName,
+            lastName: lastName || existingUser.lastName
         });
     } catch (e) {
         console.error("Update error:", e);
