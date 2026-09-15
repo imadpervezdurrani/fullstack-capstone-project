@@ -1,0 +1,26 @@
+Connected successfully to MongoDB database: giftdb
+Importing initial data from initialData.json...
+Successfully inserted 16 documents into the gifts collection.
+{
+  "acknowledged": true,
+  "insertedCount": 16,
+  "insertedIds": {
+    "0": "6aa9066a46ad3c6c4abd28b7",
+    "1": "6aa9066a46ad3c6c4abd28b8",
+    "2": "6aa9066a46ad3c6c4abd28b9",
+    "3": "6aa9066a46ad3c6c4abd28ba",
+    "4": "6aa9066a46ad3c6c4abd28bb",
+    "5": "6aa9066a46ad3c6c4abd28bc",
+    "6": "6aa9066a46ad3c6c4abd28bd",
+    "7": "6aa9066a46ad3c6c4abd28be",
+    "8": "6aa9066a46ad3c6c4abd28bf",
+    "9": "6aa9066a46ad3c6c4abd28c0",
+    "10": "6aa9066a46ad3c6c4abd28c1",
+    "11": "6aa9066a46ad3c6c4abd28c2",
+    "12": "6aa9066a46ad3c6c4abd28c3",
+    "13": "6aa9066a46ad3c6c4abd28c4",
+    "14": "6aa9066a46ad3c6c4abd28c5",
+    "15": "6aa9066a46ad3c6c4abd28c6"
+  }
+}
+Total documents in collection: 16

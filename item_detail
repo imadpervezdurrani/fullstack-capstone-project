@@ -1,0 +1,23 @@
+curl -X GET http://localhost:3060/api/gifts/1
+{
+  "id": "1",
+  "name": "Solid Oak Dining Table",
+  "category": "Living",
+  "condition": "Like New",
+  "posted_date": 1693526400,
+  "zipcode": "10001",
+  "image": "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=600&q=80",
+  "description": "Six-seater sturdy wooden dining table, minor wear and tear, ready for pickup.",
+  "comments": [
+    {
+      "author": "Sarah M.",
+      "comment": "Is this still available? Can pick up tomorrow afternoon!",
+      "sentiment": 0.45
+    },
+    {
+      "author": "Alex K.",
+      "comment": "What are the exact dimensions in inches?",
+      "sentiment": 0.0
+    }
+  ]
+}

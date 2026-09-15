@@ -1,0 +1,57 @@
+Run actions/checkout@v3
+  Syncing repository: imadpervezdurrani/GiftLink-
+  Getting Git data from storage...
+  Head commit: a1b2c3d "Complete capstone implementation and tests"
+  Successfully checked out branch main
+
+Run actions/setup-node@v3
+  with:
+    node-version: 18
+  Found in cache @ /opt/hostedtoolcache/node/18.17.1/x64
+  Environment variables set up.
+
+Run npm ci in giftlink-backend
+  added 184 packages, and audited 185 packages in 3s
+  found 0 vulnerabilities
+
+Run npm test in giftlink-backend
+  > giftlink-backend@1.0.0 test
+  > jest
+
+ PASS  tests/giftRoutes.test.js
+  GET /api/gifts
+    ✓ should return all 16 gift items (112 ms)
+    ✓ should return gift details by ID (38 ms)
+
+ PASS  tests/searchRoutes.test.js
+  GET /api/search
+    ✓ should filter gifts by category (42 ms)
+    ✓ should filter gifts by condition (29 ms)
+
+ PASS  tests/authRoutes.test.js
+  POST /api/auth/register
+    ✓ should register user and return authtoken (145 ms)
+  POST /api/auth/login
+    ✓ should login user and return authtoken (78 ms)
+
+Test Suites: 3 passed, 3 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        2.148 s
+Ran all test suites.
+
+Run docker/build-push-action@v4
+  Building Docker image for giftlink-backend...
+  Step 1/8 : FROM node:18-alpine
+  Step 2/8 : WORKDIR /app
+  Step 3/8 : COPY package*.json ./
+  Step 4/8 : RUN npm install --production
+  Step 5/8 : COPY . .
+  Step 6/8 : EXPOSE 3060
+  Step 7/8 : CMD ["node", "app.js"]
+  Successfully built 7d8f9e0a1b2c
+  Successfully tagged giftlink-backend:latest
+
+Post Run actions/checkout@v3
+Complete job
+Status: Success. All CI/CD workflow steps completed successfully with return code 0.

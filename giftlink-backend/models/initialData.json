@@ -1,0 +1,206 @@
+[
+  {
+    "id": "1",
+    "name": "Solid Oak Dining Table",
+    "category": "Living",
+    "condition": "Like New",
+    "posted_date": 1693526400,
+    "zipcode": "10001",
+    "age_years": 1,
+    "image": "https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=600&q=80",
+    "description": "Six-seater sturdy wooden dining table, minor wear and tear, ready for pickup.",
+    "comments": [
+      {
+        "author": "Sarah M.",
+        "comment": "Is this still available? Can pick up tomorrow afternoon!",
+        "sentiment": 0.45
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Ergonomic Office Chair",
+    "category": "Office",
+    "condition": "Good",
+    "posted_date": 1693612800,
+    "zipcode": "10002",
+    "age_years": 2,
+    "image": "https://images.unsplash.com/photo-1580481077198-c847ad4360f0?auto=format&fit=crop&w=600&q=80",
+    "description": "Adjustable height office chair with lumbar support, clean and fully functional.",
+    "comments": [
+      {
+        "author": "David R.",
+        "comment": "Super comfortable chair, highly recommended!",
+        "sentiment": 0.7
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Espresso Coffee Machine",
+    "category": "Kitchen",
+    "condition": "Like New",
+    "posted_date": 1693699200,
+    "zipcode": "10003",
+    "age_years": 1,
+    "image": "https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?auto=format&fit=crop&w=600&q=80",
+    "description": "15-bar pump espresso maker with milk frother, used occasionally.",
+    "comments": []
+  },
+  {
+    "id": "4",
+    "name": "Modern Bedside Lamp",
+    "category": "Bedroom",
+    "condition": "New",
+    "posted_date": 1693785600,
+    "zipcode": "10004",
+    "age_years": 0,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
+    "description": "Touch-controlled dimmable bedside lamp with warm ambient LED light.",
+    "comments": []
+  },
+  {
+    "id": "5",
+    "name": "Wooden Building Blocks Set",
+    "category": "Toys",
+    "condition": "Good",
+    "posted_date": 1693872000,
+    "zipcode": "10005",
+    "age_years": 3,
+    "image": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80",
+    "description": "100-piece natural beech wood building block set for toddlers in a storage bucket.",
+    "comments": []
+  },
+  {
+    "id": "6",
+    "name": "Ceramic Dinnerware Set",
+    "category": "Kitchen",
+    "condition": "Good",
+    "posted_date": 1693958400,
+    "zipcode": "10006",
+    "age_years": 2,
+    "image": "https://images.unsplash.com/photo-1614088445100-349071520146?auto=format&fit=crop&w=600&q=80",
+    "description": "16-piece stoneware dish set including dinner plates, bowls, and mugs.",
+    "comments": []
+  },
+  {
+    "id": "7",
+    "name": "Minimalist Bookcase (4-Tier)",
+    "category": "Living",
+    "condition": "Good",
+    "posted_date": 1694044800,
+    "zipcode": "10007",
+    "age_years": 3,
+    "image": "https://images.unsplash.com/photo-1594643442468-b80c35472855?auto=format&fit=crop&w=600&q=80",
+    "description": "Slim Scandinavian-style open shelf organizer for books and decorative plants.",
+    "comments": []
+  },
+  {
+    "id": "8",
+    "name": "Queen Size Comforter & Sheets",
+    "category": "Bedroom",
+    "condition": "Fair",
+    "posted_date": 1694131200,
+    "zipcode": "10008",
+    "age_years": 4,
+    "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80",
+    "description": "Hypoallergenic down-alternative quilted comforter set, freshly laundered.",
+    "comments": []
+  },
+  {
+    "id": "9",
+    "name": "Wireless Mechanical Keyboard",
+    "category": "Office",
+    "condition": "Like New",
+    "posted_date": 1694217600,
+    "zipcode": "10009",
+    "age_years": 1,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+    "description": "Compact 75% Bluetooth mechanical keyboard with brown tactile switches.",
+    "comments": []
+  },
+  {
+    "id": "10",
+    "name": "Stainless Steel Cookware Pots",
+    "category": "Kitchen",
+    "condition": "Good",
+    "posted_date": 1694304000,
+    "zipcode": "10010",
+    "age_years": 2,
+    "image": "https://images.unsplash.com/photo-1584990347449-39967f08b261?auto=format&fit=crop&w=600&q=80",
+    "description": "Set of three heavy-bottom saucepans with glass lids, induction compatible.",
+    "comments": []
+  },
+  {
+    "id": "11",
+    "name": "Plush Teddy Bear & Stuffed Animals",
+    "category": "Toys",
+    "condition": "Like New",
+    "posted_date": 1694390400,
+    "zipcode": "10011",
+    "age_years": 1,
+    "image": "https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=600&q=80",
+    "description": "Clean, soft plush toys in sanitized condition, looking for a loving home.",
+    "comments": []
+  },
+  {
+    "id": "12",
+    "name": "Classic Acoustic Guitar",
+    "category": "Living",
+    "condition": "Fair",
+    "posted_date": 1694476800,
+    "zipcode": "10012",
+    "age_years": 5,
+    "image": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=600&q=80",
+    "description": "Full-size nylon string classical guitar, wonderful tone, includes soft gig bag.",
+    "comments": []
+  },
+  {
+    "id": "13",
+    "name": "Wooden Writing Desk",
+    "category": "Office",
+    "condition": "Good",
+    "posted_date": 1694563200,
+    "zipcode": "10013",
+    "age_years": 3,
+    "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=600&q=80",
+    "description": "Mid-century study desk with two pullout drawers, compact footprint.",
+    "comments": []
+  },
+  {
+    "id": "14",
+    "name": "Electric Water Kettle",
+    "category": "Kitchen",
+    "condition": "Good",
+    "posted_date": 1694649600,
+    "zipcode": "10014",
+    "age_years": 2,
+    "image": "https://images.unsplash.com/photo-1574937213426-e179116a40a8?auto=format&fit=crop&w=600&q=80",
+    "description": "1.7-liter rapid boil glass kettle with auto-shutoff and blue LED ring.",
+    "comments": []
+  },
+  {
+    "id": "15",
+    "name": "Memory Foam Pillow (Set of 2)",
+    "category": "Bedroom",
+    "condition": "Like New",
+    "posted_date": 1694736000,
+    "zipcode": "10015",
+    "age_years": 1,
+    "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80",
+    "description": "Contour ergonomic cervical memory foam pillows with breathable bamboo covers.",
+    "comments": []
+  },
+  {
+    "id": "16",
+    "name": "Wooden Train Track Set",
+    "category": "Toys",
+    "condition": "Good",
+    "posted_date": 1694822400,
+    "zipcode": "10016",
+    "age_years": 3,
+    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=600&q=80",
+    "description": "Interlocking wooden railway with magnetic engines and carriages.",
+    "comments": []
+  }
+]

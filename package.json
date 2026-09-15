@@ -1,0 +1,17 @@
+{
+  "name": "fullstack-capstone-project",
+  "version": "1.0.0",
+  "description": "GiftLink - Full Stack Web Application Capstone Project",
+  "main": "giftlink-backend/app.js",
+  "scripts": {
+    "install:backend": "cd giftlink-backend && npm install",
+    "install:frontend": "cd giftlink-frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "start:backend": "cd giftlink-backend && node app.js",
+    "start:frontend": "cd giftlink-frontend && npm run dev",
+    "start": "node run-all.js"
+  },
+  "keywords": ["giftlink", "fullstack", "react", "express", "mongodb"],
+  "author": "Imad Pervez Durrani",
+  "license": "MIT"
+}
