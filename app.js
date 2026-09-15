@@ -1,51 +1,39 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const connectToDatabase = require('./models/db');
+const connectToDatabase = require('./giftlink-backend/models/db');
 
-const giftRoutes = require('./routes/giftRoutes');
-const searchRoutes = require('./routes/searchRoutes');
-const authRoutes = require('./routes/authRoutes');
+const giftRoutes = require('./giftlink-backend/routes/giftRoutes');
+const searchRoutes = require('./giftlink-backend/routes/searchRoutes');
+const authRoutes = require('./giftlink-backend/routes/authRoutes');
 
 const app = express();
 const port = process.env.PORT || 3060;
 
-// Enable CORS for frontend development
-app.use(cors({
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
+app.use(cors());
 app.use(express.json());
 
-// Routes serving the APIs
 app.use('/api/gifts', giftRoutes);
 app.use('/api/auth', authRoutes);
 
-// Route serving /api/search directly within app.js as well as through searchRoutes
+// Route serving /api/search directly within app.js
 app.use('/api/search', searchRoutes);
 
-// Direct route handler serving /api/search
 app.get('/api/search', async (req, res, next) => {
     try {
         const db = await connectToDatabase();
         const collection = db.collection("gifts");
         let query = {};
 
-        // Filter items by category
         if (req.query.category && req.query.category !== 'All') {
             query.category = req.query.category;
         }
-        // Filter items by name keyword
         if (req.query.name) {
             query.name = { $regex: req.query.name, $options: "i" };
         }
-        // Filter items by condition
         if (req.query.condition && req.query.condition !== 'All') {
             query.condition = req.query.condition;
         }
-        // Filter items by age
         if (req.query.age_years) {
             query.age_years = { $lte: parseInt(req.query.age_years) };
         }
@@ -57,23 +45,14 @@ app.get('/api/search', async (req, res, next) => {
     }
 });
 
-// Health check endpoint
 app.get('/', (req, res) => {
     res.send('Inside the backend server for GiftLink');
 });
 
-// Connect to Database and start server
-connectToDatabase()
-    .then(() => {
-        app.listen(port, () => {
-            console.log(`Server running on port ${port}`);
-        });
-    })
-    .catch((err) => {
-        console.error("Failed to connect to database:", err);
-        app.listen(port, () => {
-            console.log(`Server running on port ${port} (resilient mode)`);
-        });
-    });
+connectToDatabase().catch(console.error);
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
 
 module.exports = app;
